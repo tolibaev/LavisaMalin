@@ -1,0 +1,149 @@
+.photos {
+   position: relative;
+   z-index: 4;
+   @media (min-width:  toEm($tablet)) {
+      &::before {
+         content: "";
+         width: toRem(1706);
+         height: toRem(1706);
+         display: block;
+         position: absolute;
+         top: -(calc(1300 / 1706) * 100%);
+         left: 50%;
+         translate: -50% 0;
+         background: url("../img/icons/decor.svg") 0 0 / cover no-repeat;
+         z-index: -1;
+      }
+   }
+}
+.top-photos {
+   @media (min-width:  toEm($mobile)) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: toRem(30);
+      @media (max-width:  toEm($tablet)) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+   @media (max-width:  toEm($mobile)) {
+      & > *:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+   }
+   @media (max-width:  toEm($mobile)) {
+      margin-bottom: toRem(20);
+   }
+   // .top-photos__item
+   &__item {
+      display: flex;
+      align-items: center;
+      @include adaptiveValue(gap, 32, 16);
+      @media (min-width:  toEm($mobile)) {
+         &:nth-child(2) {
+            @media (min-width:  toEm($tablet)) {
+               justify-content: center;
+            }
+            justify-content: flex-end;
+         }
+         &:last-child {
+            @media (min-width:  toEm($tablet)) {
+               justify-content: flex-end;
+            }
+            @media (max-width:  toEm($tablet)) {
+               grid-column: -1/1;
+               justify-content: center;
+            }
+         }
+      }
+   }
+   // .top-photos__img
+   &__img {
+      aspect-ratio: 140/140;
+      flex: 0 1 toRem(140);
+   }
+   // .top-photos__content
+   &__content {
+      @media (min-width:  toEm($mobile)) {
+         flex: 0 1 toRem(220);
+      }
+   }
+   // .top-photos__title
+   &__title {
+      font-feature-settings: "clig" off, "liga" off;
+      font-weight: 600;
+      margin-bottom: toRem(7);
+   }
+   // .top-photos__text
+   &__text {
+      white-space: balance;
+      font-size: toRem(16);
+      line-height: calc(26 / 16);
+   }
+}
+.photos-bottom {
+   @include adaptiveValueMod(padding-top, 155, 20, $maxWidthContainer, 767.98);
+   @media (min-width:  toEm($tablet)) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      @include adaptiveValueMod(gap, 110, 20, $maxWidthContainer, 767.98);
+      flex-wrap: wrap;
+   }
+   @media (max-width:  toEm($tablet)) {
+      & > *:not(:last-child) {
+         margin-bottom: toRem(20);
+      }
+      margin: 0 toRem(-15);
+   }
+   // .photos-bottom__item
+   &__item {
+      aspect-ratio: 414/478;
+      display: block;
+      @media (min-width:  toEm($tablet)) {
+         flex: 0 1 toRem(414);
+         &:nth-child(2) {
+            @include adaptiveValue(margin-top, 72, 20);
+         }
+      }
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+      @media (max-width:  toEm($tablet)) {
+         width: 100%;
+      }
+
+      @media (any-hover: hover) {
+         &:hover .photos-bottom__content {
+            filter: opacity(1);
+         }
+      }
+   }
+   &__content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      z-index: 2;
+      width: 100%;
+      padding: toRem(10) toRem(15);
+      text-align: center;
+
+      color: $white;
+      text-transform: uppercase;
+
+      @media (any-hover: hover) {
+         filter: opacity(0);
+         transition: filter 0.3s;
+      }
+   }
+   // .photos-bottom__title
+   &__title {
+      @include adaptiveValue(font-size, 78, 40);
+      line-height: 100%;
+      font-weight: 400;
+   }
+   // .photos-bottom__text
+   &__text {
+      font-size: toRem(16);
+      font-weight: 400;
+      font-feature-settings: "clig" off, "liga" off;
+   }
+}

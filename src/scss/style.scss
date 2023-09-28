@@ -1,0 +1,99 @@
+@charset 'UTF-8';
+@import "./modules/reset";
+@import "./modules/fonts";
+
+//$display=swap
+// @import "./modules/iconsfont";
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,500,600$display=swap");
+
+//=============================================================================================================================================
+
+$maxWidthContainer: 1462;
+$containerPadding: 15;
+$maxWidthLayout: 1920;
+
+@import "./modules/mixins";
+
+@import "./modules/vars";
+
+//=============================================================================================================================================
+
+body {
+   font-family: $fontFamily, Arial, Helvetica, sans-serif;
+   color: $color;
+   @include adaptiveValue(font-size, 20, 16);
+   font-weight: 300;
+   line-height: calc(34 / 20);
+   font-feature-settings: "clig" off, "liga" off;
+   &._lock {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+   -web-kit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+@import "./modules/animations";
+
+@import "./modules/containers";
+
+@import "./modules/base";
+@import "./modules/fragments";
+// @import "./modules/popup";
+// @import "./modules/dropdown";
+//=============================================================================================================================================
+@import "./modules/header";
+//=============================================================================================================================================
+.page {
+   &__photos {
+      @include adaptiveValueMod(padding-top, 188, 30, $maxWidthContainer, $mobile);
+   }
+   // .page__heritage
+   &__heritage {
+      @include adaptiveValueMod(padding-bottom, 100, 10, $maxWidthContainer, $mobile);
+      @include adaptiveValueMod(padding-top, 220, 30, $maxWidthContainer, $mobile);
+   }
+   // .page__about
+   &__about {
+      @include adaptiveValueMod(margin-top, 87, 20, $maxWidthContainer, $mobile);
+   }
+   &__camere {
+      @include adaptiveValueMod(margin-top, 242, 20, $maxWidthContainer, $mobile);
+      @include adaptiveValueMod(padding-bottom, 187, 20, $maxWidthContainer, $mobile);
+   }
+   // .page__culture
+   &__culture {
+      @include adaptiveValueMod(margin-top, 100, 10, $maxWidthContainer, $mobile);
+      @include adaptiveValueMod(margin-bottom, 120, 20, $maxWidthContainer, $mobile);
+   }
+   // .page__service
+   &__service {
+      @include adaptiveValueMod(padding-top, 120, 10, $maxWidthContainer, $mobile);
+      @include adaptiveValueMod(padding-bottom, 286, 20, $maxWidthContainer, $mobile);
+   }
+   // .page__dinner
+   &__dinner {
+      @include adaptiveValueMod(padding-top, 280, 20, $maxWidthContainer, $mobile);
+      @include adaptiveValueMod(padding-bottom, 246, 30, $maxWidthContainer, $mobile);
+   }
+   // .page__request
+   &__request {
+      @include adaptiveValueMod(padding-bottom, 255, 30, $maxWidthContainer, $mobile);
+   }
+}
+
+@import "./blocks/hero";
+@import "./blocks/photos";
+@import "./blocks/heritage";
+@import "./blocks/camere";
+@import "./blocks/culture";
+@import "./blocks/service";
+@import "./blocks/map";
+@import "./blocks/dinner";
+@import "./blocks/request";
+@import "./blocks/decor-block";
+@import "./blocks/about";
+//=============================================================================================================================================
+
+@import "./modules/footer";

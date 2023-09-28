@@ -1,0 +1,23 @@
+.decor-block {
+   background-color: $salat;
+   @media (max-width:  toEm($tablet)) {
+      margin: 0 toRem(-15);
+   }
+   // .decor-block__container
+   &__container {
+   }
+   // .decor-block__img
+   &__img {
+      aspect-ratio: 1436/216;
+      max-width: 100%;
+      z-index: 2;
+      margin-bottom: toRem(-130);
+      @include adaptiveValueMod(margin-bottom, -130, 0, 1920, $tablet);
+   }
+   // .decor-block__big-img
+   &__big-img {
+      aspect-ratio: 1460/596;
+      max-width: 100%;
+   }
+   @include adaptiveValueMod(margin-bottom, -156, 0, 1920, $tablet);
+}

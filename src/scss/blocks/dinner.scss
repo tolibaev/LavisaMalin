@@ -1,0 +1,111 @@
+.dinner {
+   position: relative;
+   @media (min-width:  toEm(1300)) {
+      overflow: clip;
+   }
+   & > img {
+      @include adaptiveValue(width, 880, 100);
+      @include adaptiveValue(height, 880, 100);
+      position: absolute;
+      top: -24%;
+      left: 50%;
+      translate: -50% 0;
+   }
+   &::before {
+      content: "";
+      width: 100%;
+      @include adaptiveValue(height, 562, 200);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $salat;
+   }
+   // .dinner__container
+   &__container {
+   }
+   // .dinner__title
+   &__title {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: flex-start;
+      @include adaptiveValue(font-size, 200, 60);
+      color: $blue;
+      span:first-child {
+         @include adaptiveValue(font-size, 105, 60);
+         line-height: 100%;
+      }
+      line-height: 100%;
+      @include adaptiveValue(margin-bottom, 60, 0);
+   }
+   // .dinner__content
+   &__content {
+      @media (min-width: toEm($tablet)) {
+         display: flex;
+         justify-content: space-between;
+         gap: toRem(30);
+      }
+      p {
+         flex-basis: toRem(640);
+         span {
+            display: inline-block;
+            &:not(:last-child) {
+               margin-bottom: toRem(20);
+            }
+         }
+         @media (max-width:  toEm($tablet)) {
+            &:not(:last-child) {
+               margin-bottom: toRem(20);
+            }
+         }
+      }
+      @include adaptiveValue(margin-bottom, 123, 20);
+   }
+   // .dinner__items
+   &__items {
+      @media (min-width: toEm(712)) {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(toRem(320), 1fr));
+         @include adaptiveValue(gap, 85, 20);
+         align-items: top;
+      }
+      @media (max-width:  toEm(712)) {
+         text-align: center;
+         margin: 0 toRem(-15);
+      }
+   }
+   // .dinner__item
+   &__item {
+      position: relative;
+      z-index: 15;
+      @media (min-width: toEm(712)) {
+         max-width: toRem(430);
+      }
+      @media (max-width:  toEm(712)) {
+         &:not(:last-child) {
+            margin-bottom: toRem(20);
+         }
+      }
+      max-width: 100%;
+      &--1 {
+         aspect-ratio: 430/480;
+      }
+      &--2 {
+         aspect-ratio: 430/298;
+      }
+      &--3 {
+         aspect-ratio: 430/390;
+      }
+      width: 100%;
+      @media (max-width:  toEm(1200)) {
+         &--2 {
+            order: 3;
+         }
+         &--3 {
+            order: 2;
+         }
+      }
+   }
+}

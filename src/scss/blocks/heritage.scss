@@ -1,0 +1,95 @@
+.heritage {
+   // .heritage__title
+   &__title {
+      position: relative;
+      z-index: 2;
+      p {
+         display: flex;
+         align-items: center;
+         gap: toRem(20);
+         justify-content: center;
+         line-height: 100%;
+
+         &:not(:last-child) {
+            @include adaptiveValue(margin-bottom, 30, 10);
+         }
+      }
+      img {
+         @media (min-width:  toEm($tablet)) {
+            @include adaptiveValueMod(flex-basis, 182, 60, 1500, 767.98);
+            @include adaptiveValueMod(height, 128, 60, 1500, 767.98);
+            display: block;
+         }
+         display: none;
+      }
+      @media (min-width:  toEm($tablet)) {
+         @include adaptiveValueMod(font-size, 129, 60, 1500, 992);
+      }
+      @include adaptiveValue(font-size, 60, 40);
+      font-weight: 400;
+      text-align: center;
+      text-transform: uppercase;
+      @media (max-width:  toEm($tablet)) {
+         margin-bottom: toRem(6);
+      }
+   }
+   // .heritage__title--brown
+   &__title--brown {
+      color: $brown;
+      span {
+         color: $blue;
+      }
+   }
+   // .heritage__title--blue
+   &__title--blue {
+      color: $blue;
+      span {
+         color: $brown;
+      }
+   }
+   // .heritage__body
+   &__body {
+      @media (min-width:  toEm($tablet)) {
+         @include adaptiveValueMod(margin-top, -64, -30, 1500, 767.98);
+         display: flex;
+         align-items: flex-end;
+         justify-content: space-between;
+         gap: toRem(30);
+      }
+      &-img {
+         @media (min-width:  toEm($tablet)) {
+            aspect-ratio: 590/556;
+            flex: 0 0 toRem(590);
+            display: block;
+         }
+         display: none;
+      }
+   }
+   // .heritage__content
+   &__content {
+      @media (min-width:  toEm($tablet)) {
+         flex: 0 1 toRem(456);
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         align-items: flex-start;
+         @include adaptiveValue(gap, 48, 20);
+      }
+   }
+   // .heritage__text
+   &__text {
+      & > *:not(:last-child) {
+         @include adaptiveValue(margin-bottom, 36, 16);
+      }
+      @media (max-width:  toEm($tablet)) {
+         margin-bottom: toRem(20);
+      }
+   }
+   // .heritage__btn
+   &__btn {
+      color: inherit;
+      @media (max-width:  toEm($tablet)) {
+         width: 100%;
+      }
+   }
+}

@@ -1,0 +1,63 @@
+.culture {
+   display: none;
+}
+@media (min-width:  toEm($mobile)) {
+   .culture {
+      display: block;
+      overflow: clip;
+      position: relative;
+      & > img {
+         width: toRem(2038);
+         height: toRem(2038);
+         position: absolute;
+         right: -70%;
+         top: 50%;
+         translate: 0 -50%;
+      }
+      background-color: $blue;
+      // .culture__container
+      &__container {
+         @include adaptiveValue(padding-top, 140, 20);
+         @include adaptiveValue(padding-bottom, 140, 20);
+
+         p {
+            @include adaptiveValue(font-size, 200, 60);
+            color: $white;
+            text-align: center;
+            line-height: 100%;
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+         }
+      }
+      // .culture__img
+      &__img {
+         aspect-ratio: 1200/626;
+         max-width: toRem(1200);
+         margin: 0 auto;
+         position: relative;
+         &::before {
+            content: "";
+            display: block;
+            width: toRem(1462);
+            margin: 0 auto;
+            height: toRem(208);
+            background-color: $brown;
+            position: absolute;
+            top: 50%;
+            translate: -50% -50%;
+            left: 50%;
+         }
+      }
+      // .culture__top-text
+      &__top-text {
+         top: toRem(-50);
+         left: 0;
+      }
+      // .culture__bottom-text
+      &__bottom-text {
+         @include adaptiveValue(bottom, -110, -40);
+         left: 0;
+      }
+   }
+}

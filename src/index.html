@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+"title": "Главная"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="page">
+         <section class="page__hero hero">
+            <div class="hero__title-block _anim-items _anim-no-hide">
+               <p class="hero__subtitle">WELCOME TO US</p>
+               <h1 class="hero__title">
+                  <span class="hero__title-top _br">Heritage</span>
+                  <span class="hero__title-row _br">
+                     <span>of</span>
+                     <span>LanD</span>
+                  </span>
+               </h1>
+            </div>
+            <div class="hero__card card-hero">
+               <div class="card-hero__body">
+                  <div class="card-hero__content">
+                     <p class="card-hero__text _anim-items anim-no-hide">Lorem ipsum dolor sit amet consectetur. Leo
+                        neque in sed posuere eu. Arcu nibh vestibulum tristique gravida.</p>
+                     <a class="card-hero__btn btn _anim-items" href="#!">
+                        <span>Book Now</span>
+                        <img src="@img/icons/arrow.svg" alt="" lazy="loading" aria-hidden="true">
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="hero__slider">
+               <div class="swiper">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="hero__slide-img _ibg">
+                           <img src="@img/slide-img.jpg" alt="Изображение Отеля" lazy="loading" aria-hidden="true">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="hero__slide-img _ibg">
+                           <img src="@img/culture.jpg" alt="Изображение Отеля" lazy="loading" aria-hidden="true">
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="hero__slide-img _ibg">
+                           <img src="@img/slide-img.jpg" alt="Изображение Отеля" lazy="loading" aria-hidden="true">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="hero__pagination"></div>
+         </section>
+         <section class="page__photos photos">
+            <div class="photos__container">
+               <div class="top-photos">
+                  <div class="top-photos__item">
+                     <div class="top-photos__img _ibg _anim-items _anim-scale">
+                        <img src="@img/top-img-01.jpg" alt="" lazy="loading" aria-hidden="true">
+                     </div>
+                     <div class="top-photos__content _anim-items _anim-down-top">
+                        <h3 class="top-photos__title">Sit amet consectetur.</h3>
+                        <p class="top-photos__text">Lorem ipsum dolor sit amet consectetur.</p>
+                     </div>
+                  </div>
+                  <div class="top-photos__item">
+                     <div class="top-photos__img _ibg _anim-items _anim-scale">
+                        <img src="@img/top-img-02.jpg" alt="" lazy="loading" aria-hidden="true">
+                     </div>
+                     <div class="top-photos__content _anim-items _anim-down-top">
+                        <h3 class="top-photos__title">Sit amet consectetur.</h3>
+                        <p class="top-photos__text">Lorem ipsum dolor sit amet consectetur.</p>
+                     </div>
+                  </div>
+                  <div class="top-photos__item">
+                     <div class="top-photos__img _ibg _anim-items _anim-scale">
+                        <img src="@img/top-img-03.jpg" alt="" lazy="loading" aria-hidden="true">
+                     </div>
+                     <div class="top-photos__content _anim-items _anim-down-top">
+                        <h3 class="top-photos__title">Sit amet consectetur.</h3>
+                        <p class="top-photos__text">Lorem ipsum dolor sit amet consectetur.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="photos-bottom">
+                  <a class="photos-bottom__item _ibg _anim-items _anim-left-to-right " href="#!">
+                     <img src="@img/bttom-img-01.jpg" alt="" lazy="loading" aria-hidden="true">
+                     <div class="photos-bottom__content">
+                        <h3 class="photos-bottom__title _br">Suite</h3>
+                        <p class="photos-bottom__text">Lorem ipsum dolor sit amet.</p>
+                     </div>
+                  </a>
+                  <a class="photos-bottom__item _ibg _anim-items _anim-scale " href="#!">
+                     <img class="_anim-items _anim-scale" src="@img/bttom-img-02.jpg" alt="" lazy="loading"
+                        aria-hidden="true">
+                     <div class="photos-bottom__content">
+                        <h3 class="photos-bottom__title _br">SERVICE</h3>
+                        <p class="photos-bottom__text">Lorem ipsum dolor sit amet.</p>
+                     </div>
+                  </a>
+                  <a class="photos-bottom__item _ibg _anim-items _anim-right-to-left " href="#!">
+                     <img class="_anim-items _anim-scale" src="@img/bttom-img-03.jpg" alt="" lazy="loading"
+                        aria-hidden="true">
+                     <div class="photos-bottom__content">
+                        <h3 class="photos-bottom__title _br">DINNer</h3>
+                        <p class="photos-bottom__text">Lorem ipsum dolor sit amet.</p>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </section>
+         <section class="page__heritage heritage">
+            <div class="heritage__container">
+               <div class="heritage__title _br">
+                  <p class="heritage__title--brown _anim-items  _anim-left-to-right">HERITaGE <img
+                        src="@img/heritage-top-01.jpg" alt="" lazy="loading" aria-hidden="true"> <span>,</span></p>
+                  <p class="heritage__title--blue _anim-items  _anim-right-to-left"><img src="@img/heritage-top-02.jpg"
+                        alt="" lazy="loading" aria-hidden="true"> INCLUSIVE, LUXUrIOUS</p>
+                  <p class="heritage__title--blue _anim-items  _anim-left-to-right">SERVICE <img
+                        src="@img/heritage-top-03.jpg" alt="" lazy="loading" aria-hidden="true"> of</p>
+                  <p class="heritage__title--blue _anim-items  _anim-right-to-left"><img src="@img/heritage-top-04.jpg"
+                        alt="" lazy="loading" aria-hidden="true"> FaMILY <span>CULTure</span></p>
+               </div>
+               <div class="heritage__body">
+                  <div class="heritage__content _anim-items  _anim-down-top">
+                     <div class="heritage__text">
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur. Leo neque in sed posuere eu. Arcu nibh vestibulum
+                           tristique gravida.
+                        </p>
+                        <p>
+                           Porttitor elementum tempus in dolor turpis. Habitasse non in cras est auctor vitae id. Quam
+                           id aliquam lectus odio ipsum integer pretium. Urna magna sagittis aenean.
+                        </p>
+                     </div>
+                     <a class="heritage__btn btn" href="#!">
+                        <span>Book Now</span>
+                        <img src="@img/icons/arrow.svg" alt="" lazy="loading" aria-hidden="true">
+                     </a>
+                  </div>
+                  <img class="heritage__body-img _anim-items _anim-scale" src="@img/heritage-img.jpg" alt=""
+                     lazy="loading" aria-hidden="true">
+               </div>
+            </div>
+         </section>
+         <section class="page__about about">
+            <div class="about__content">
+               <div class="about__body _anim-items">
+                  <div class="about__text">
+                     <p class="_anim-left-to-right">Lorem ipsum dolor sit amet consectetur. Leo neque in sed posuere eu.
+                        Arcu nibh vestibulum tristique gravida.</p>
+                     <p class="_anim-right-to-left">Porttitor elementum tempus in dolor turpis. Habitasse non in cras
+                        est auctor vitae id. Quam id aliquam lectus odio ipsum integer pretium. Urna magna sagittis
+                        aenean.</p>
+                  </div>
+                  <a class="about__link btn _anim-down-top" href="#!">BOOK NOW</a>
+               </div>
+            </div>
+            <div class="about__img _ibg _anim-items">
+               <img src="@img/servicr.jpg" alt="" lazy="loading" aria-hidden="true">
+            </div>
+         </section>
+         <section class="page__camere camere">
+            <div class="camere__containerLeft">
+               <div class="camere__top top-camere">
+                  <div class="top-camere__img top-camere__img--1 _ibg _anim-items _anim-left-to-right">
+                     <img src="@img/camere-01.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="top-camere__content _anim-items">
+                     <h2 class="top-camere__title _br _anim-down-top">
+                        <span>CaMERE</span> <span><span>&</span> <span>SUITE</span></span>
+                     </h2>
+                     <div class="top-camere__text _anim-items">
+                        <p class="_anim-down-top">
+                           Porttitor elementum tempus in dolor turpis. Habitasse non in cras est auctor vitae id. Quam
+                           id aliquam lectus odio ipsum integer pretium. Urna magna sagittis.
+                        </p>
+                        <p class="_anim-down-top">
+                           Aenean molestie vestibulum elementum mi. Duis elementum ut faucibus mauris diam ut faucibus
+                           netus. Nec phasellus vulputate accumsan mattis cras nunc vitae. Integer enim fermentum
+                           praesent purus adipiscing.
+                        </p>
+                        <p class="_anim-down-top">
+                           Fames eget nisl volutpat cursus diam proin suspendisse. Massa dictum purus gravida praesent.
+                           Amet vulputate tempor massa maecenas et. Aenean molestie vestibulum elementum mi. Duis
+                           elementum ut faucibus mauris diam ut faucibus netus. Nec phasellus vulputate accumsan mattis
+                           cras nunc vitae. Integer enim.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="top-camere__img top-camere__img--2 _ibg _anim-items _anim-right-to-left">
+                     <img src="@img/camere-02.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+               </div>
+            </div>
+            <div class="camere__container">
+               <div class="camere__row row-camere">
+                  <p class="row-camere__text row-camere__text--top _anim-items  _anim-left-top-to-place">Porttitor
+                     elementum tempus in dolor turpis. Habitasse non in cras est auctor vitae id. Quam id aliquam lectus
+                     odio ipsum integer pretium. Urna magna. Amet vulputate.</p>
+                  <div class="row-camere__img row-camere__img--1 _ibg _anim-items  _anim-scale">
+                     <img src="@img/camere-03.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <p
+                     class="row-camere__text-decor row-camere__text-decor--blue _br _anim-items  _anim-right-top-to-place">
+                     LOVISa</p>
+               </div>
+               <div class="camere__row row-camere row-camere--reverse _anim-items ">
+                  <p class="row-camere__text-decor row-camere__text-decor--brown _br _anim-left-bottom-to-place">Malin
+                  </p>
+                  <div class="row-camere__img row-camere__img--2 _ibg _anim-scale">
+                     <img src="@img/camere-04.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <p class="row-camere__text row-camere__text--wide _anim-right-bottom-to-place">Porttitor elementum
+                     tempus in dolor turpis. Habitasse non in cras est auctor vitae id. Quam id aliquam lectus odio
+                     ipsum integer pretium. Urna magna. Amet vulputate. Aenean molestie vestibulum elementum mi. Duis
+                     elementum ut faucibus mauris diam ut faucibus netus. Nec phasellus vestibulum.</p>
+               </div>
+            </div>
+         </section>
+         <section class="page__culture culture">
+            <img src="@img/icons/decor.svg" alt="" lazy="loading" aria-hidden="true">
+            <div class="culture__container">
+               <div class="culture__img _ibg _anim-items ">
+                  <p class="culture__top-text _br _anim-top-down">HERITaGE</p>
+                  <img class="_anim-scale" src="@img/culture.jpg" alt="" lazy="loading" aria-hidden="true">
+                  <p class="culture__bottom-text _br _anim-down-top">CULTUre</p>
+               </div>
+            </div>
+         </section>
+         <section class="page__service service">
+            <div class="service__containerRight">
+               <div class="service-top _anim-items">
+                  <div class="service-top__img _ibg _anim-left-to-right">
+                     <img src="@img/service-01.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <p class="service-top__title _br service__title _anim-right-to-left">INCLUSIVE</p>
+               </div>
+            </div>
+            <div class="service__container">
+               <div class="service-center _anim-items">
+                  <p class="service-center__title _br service__title _anim-left-to-right"
+                     data-da=".service-top, 991.98, first">service</p>
+                  <p class="service-center__text _anim-left-to-right">Porttitor elementum tempus in dolor turpis.
+                     Habitasse non in cras est auctor vitae id. Quam id aliquam lectus odio ipsum integer pretium. Urna
+                     magna. </p>
+                  <div class="service-center__img _ibg _anim-left-to-right">
+                     <img src="@img/service-02.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+               </div>
+               <div class="service-bottom">
+                  <div class="service-bottom__img _ibg _anim-items _anim-scale">
+                     <img src="@img/service-03.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="service-bottom__img _ibg _anim-items _anim-scale">
+                     <img src="@img/service-04.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="service-bottom__img _ibg _anim-items _anim-scale">
+                     <img src="@img/service-05.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="service-bottom__img _ibg _anim-items _anim-scale">
+                     <img src="@img/service-06.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="service-bottom__img _ibg _anim-items _anim-scale">
+                     <img src="@img/service-07.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="page__map map _anim-items">
+            <img class="map__item _anim-left-to-right" src="@img/icons/map.svg" alt="" lazy="loading"
+               aria-hidden="true">
+            <img class="map__bgr map__bgr-1" src="@img/icons/decor.svg" alt="" lazy="loading" aria-hidden="true">
+            <img class="map__bgr map__bgr-2" src="@img/icons/decor.svg" alt="" lazy="loading" aria-hidden="true">
+            <img class="map__bgr map__bgr-white _anim-scale" src="@img/icons/decor-white.svg" alt="" lazy="loading"
+               aria-hidden="true">
+            <div class="map__container">
+               <p class="map__cityName map__cityName-1 map__cityName--big _anim-scale">MAR ADRIATICO</p>
+               <p class="map__cityName map__cityName-2 _anim-scale">Torre Dell’Orso</p>
+               <p class="map__cityName map__cityName-3 _anim-scale">Otranto</p>
+               <p class="map__cityName map__cityName-4 map__cityName--center _anim-scale">Nardo</p>
+               <p class="map__cityName map__cityName-5 map__cityName--center _anim-scale">Lecce</p>
+               <p class="map__cityName map__cityName-6 map__cityName--center map__cityName--white _anim-scale">Lovisa
+                  Malin</p>
+               <p class="map__cityName map__cityName-7 map__cityName--bottom _anim-scale">Gallipoli</p>
+               <h2 class="map__title _br _anim-down-top">
+                  <span>Santa Maria</span>
+                  <span>
+                     <span>di</span>
+                     <span>leuca</span>
+                  </span>
+               </h2>
+            </div>
+         </section>
+         <section class="page__dinner dinner">
+            <img src="@img/icons/decor.svg" alt="" lazy="loading" aria-hidden="true">
+            <div class="dinner__container">
+               <h2 class="dinner__title _br _anim-items _anim-right-top-to-place"><span>the</span><span>DINNER</span></h2>
+               <div class="dinner__content _anim-items">
+                  <p class="_anim-left-to-right">
+                     <span> Porttitor elementum tempus in dolor turpis. Habitasse non in cras est auctor vitae id. Quam
+                        id aliquam lectus odio ipsum integer pretium. Urna magna sagittis.</span>
+                     <span>Aenean molestie vestibulum elementum mi. Duis elementum ut faucibus mauris diam ut faucibus
+                        netus. Nec phasellus vulputate accumsan mattis cras nunc vitae. Integer enim fermentum praesent
+                        purus adipiscing.</span>
+                  </p>
+                  <p class="_anim-right-to-left">
+                     Fames eget nisl volutpat cursus diam proin suspendisse. Massa dictum purus gravida praesent. Amet
+                     vulputate tempor massa maecenas et. Aenean molestie vestibulum elementum mi. Duis elementum ut
+                     faucibus mauris diam ut faucibus netus. Nec phasellus vulputate accumsan mattis cras nunc vitae.
+                     Integer enim. ec phasellus vulputate accumsan mattis cras nunc vitae. Integer enim fermentum
+                     praesent purus adipiscing.
+                  </p>
+               </div>
+               <div class="dinner__items _anim-items">
+                  <div class="dinner__item _ibg dinner__item--1 _anim-scale">
+                     <img src="@img/dinne-01.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="dinner__item _ibg dinner__item--2 _anim-scale">
+                     <img src="@img/dinner-02.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="dinner__item _ibg dinner__item--3 _anim-scale">
+                     <img src="@img/dinner-03.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="page__request request _anim-items">
+            <img src="@img/icons/decor.svg" alt="" lazy="loading" aria-hidden="true">
+            <div class="request__container">
+               <h2 class="request__title _br _anim-left-top-to-place">
+                  Request Info
+               </h2>
+            </div>
+            <div class="request__container-right">
+               <div class="request-content">
+                  <div class="request-content__img request-content__img--1 _ibg _anim-left-to-right">
+                     <img src="@img/request-01.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <div class="request-content__img request-content__img--2 _ibg _anim-left-to-right">
+                     <img src="@img/request-02.jpg" alt="" lazy="loading" aria-hidden="true">
+                  </div>
+                  <form class="request-form _anim-left-to-right" action="#!" id="request-form">
+                     <div class="request-form__top">
+                        <input class="request-form__input _req" type="text" placeholder="First Name">
+                        <input class="request-form__input _req" type="text" placeholder="Last Name">
+                        <input class="request-form__input _req _email" type="email" placeholder="Email">
+                     </div>
+                     <textarea class="request-form__input request-form__area" placeholder="Message"></textarea>
+                     <label class="request-form__checkBlock">
+                        <input class="request-form__checkbox" type="checkbox">
+                        <span>Authorize the processing of my personal data </span>
+                     </label>
+                     <button class="request-form__btn btn" type="submit">
+                        <span>Submit</span>
+                        <img src="@img/icons/arrow.svg" alt="" lazy="loading" aria-hidden="true">
+                     </button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <div class="decor-block _anim-items">
+            <div class="decor-block__container">
+               <div class="decor-block__img _ibg _anim-down-top">
+                  <img src="@img/icons/big-logo.svg" lazy="loading" aria-hidden="true">
+               </div>
+               <div class="decor-block__big-img _ibg _anim-scale">
+                  <img src="@img/decor.jpg" alt="" lazy="loading" aria-hidden="true">
+               </div>
+            </div>
+         </div>
+      </main>
+      @@include('html/footer.html', {})
+   </div>
+   <script src="js/app.bundle.js"></script>
+</body>
+
+</html>

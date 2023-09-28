@@ -1,0 +1,37 @@
+.title {
+}
+.btn {
+   display: flex;
+   justify-content: space-between;
+   @include adaptiveValue(padding-top, 16, 10);
+   @include adaptiveValue(padding-bottom, 16, 10);
+   @include adaptiveValue(padding-left, 32, 16);
+   @include adaptiveValue(padding-right, 32, 16);
+   align-items: center;
+   gap: toRem(10);
+
+   border-radius: toRem(50);
+   border: 1px solid $brown;
+   color: $white;
+
+   @media (any-hover: hover) {
+      transition: box-shadow 0.3s;
+      &:hover {
+         box-shadow: 0 0 toRem(10) $brown;
+      }
+   }
+   &:focus {
+      outline: none;
+   }
+   &:focus-visible {
+      outline: none;
+      box-shadow: 0 0 toRem(20) $brown;
+   }
+}
+._br {
+   font-family: Brand;
+}
+._stroke {
+   -webkit-text-stroke: toRem(1) #22adaa;
+   -webkit-text-fill-color: transparent;
+}

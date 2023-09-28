@@ -1,0 +1,165 @@
+.footer {
+   background-color: $blue;
+   @include adaptiveValueMod(padding-top, 223, 20, 1920, $tablet);
+   @include adaptiveValueMod(padding-bottom, 48, 20, 1920, $tablet);
+   // .footer__container
+   &__container {
+      color: $white;
+   }
+   // .footer__top
+   &__top {
+      @include adaptiveValue(margin-bottom, 86, 20);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      @media (max-width:  toEm(1200)) {
+         flex-wrap: wrap;
+      }
+      gap: toRem(20);
+   }
+   // .footer__info
+   &__info {
+      @media (min-width:  toEm(1200)) {
+         flex-basis: toRem(269);
+      }
+      @media (min-width:  toEm($mobile)) {
+         flex-basis: toRem(400);
+      }
+   }
+   // .footer__title
+   &__title {
+      font-weight: 600;
+      margin-bottom: toRem(7);
+   }
+   // .footer__text
+   &__text {
+      line-height: calc(26 / 16);
+      color: inherit;
+   }
+   // .footer__mail-block
+   &__mail-block {
+      @media (min-width: toEm(1200)) {
+         flex-basis: toRem(180);
+      }
+   }
+   // .footer__link
+   &__link {
+      display: inline-block;
+      color: inherit;
+      @include adaptiveValue(margin-bottom, 24, 10);
+   }
+   // .footer__list
+   &__list {
+      display: flex;
+      align-items: center;
+      align-items: flex-start;
+      gap: toRem(14);
+   }
+   // .footer__list-item
+   &__list-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+      border: toRem(1) solid $white;
+      flex-basis: toRem(43);
+      height: toRem(43);
+      flex-shrink: 0;
+      img {
+         display: block;
+      }
+      @media (any-hover: hover) {
+         transition: scale 0.3s;
+         &:hover {
+            scale: 1.1;
+         }
+      }
+   }
+   // .footer__social-link
+   &__social-link {
+      display: inline-block;
+      padding: toRem(11);
+   }
+   // .footer__form
+   &__form {
+      flex-basis: toRem(586);
+   }
+   // .footer__bottom
+   &__bottom {
+   }
+}
+.form-footer {
+   @media (max-width:  toEm(1200)) {
+      flex-basis: 100%;
+   }
+   // .form-footer__body
+   &__body {
+      @include adaptiveValue(margin-top, 13, 0);
+      @media (min-width: toEm($mobile)) {
+         display: flex;
+         align-items: center;
+         gap: toRem(16);
+      }
+   }
+   // .form-footer__input
+   &__input {
+      border-radius: toRem(50);
+      border: toRem(1) solid $white;
+      @include adaptiveValue(padding-top, 16, 10);
+      @include adaptiveValue(padding-bottom, 16, 10);
+      @include adaptiveValue(padding-left, 32, 16);
+      @include adaptiveValue(padding-right, 32, 16);
+      &:focus {
+         outline: none;
+      }
+      &:focus-visible {
+         outline: none;
+         box-shadow: 0 0 toRem(10) $white;
+      }
+      @media (max-width:  toEm(1200)) {
+         width: 100%;
+      }
+      @media (max-width: toEm($mobile)) {
+         margin-bottom: toRem(20);
+      }
+      &._error {
+         box-shadow: 0 0 toRem(10) red;
+      }
+   }
+   // .form-footer__btn
+   &__btn {
+      span {
+         @include adaptiveValue(font-size, 20, 16);
+         font-weight: 300;
+      }
+      @media (max-width: toEm(1200)) {
+         width: 100%;
+      }
+      justify-content: space-between;
+   }
+}
+.bottom-footer {
+   @media (min-width: toEm($mobile)) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   color: $white;
+   @include adaptiveValueMod(padding-right, 293, 0, 1920, 1440);
+   // .bottom-footer__copy
+   &__copy {
+      span {
+         font-weight: 500;
+         color: $brown;
+      }
+   }
+   // .bottom-footer__link
+   &__link {
+   }
+   div {
+      display: flex;
+      align-items: center;
+      @include adaptiveValueMod(gap, 88, 20, $maxWidthContainer, $mobile);
+   }
+}

@@ -1,0 +1,243 @@
+.hero {
+   min-height: 100vh;
+   position: relative;
+   z-index: 5;
+   @media (height < toEm(750)) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+   }
+   // .hero__subtitle
+   &__subtitle {
+      letter-spacing: toRem(4);
+      text-transform: uppercase;
+      font-weight: 600;
+      @include adaptiveValueMod(margin-bottom, 44, 6, 1462, 767.98);
+   }
+   // .hero__title-block
+   &__title-block {
+      @media (height > toEm(750)) {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: 3;
+      }
+      color: $white;
+      @media (min-width:  toEm(1800)) {
+         padding-left: toRem(436);
+         padding-top: toRem(276);
+      }
+      @media ((height < toEm(950)) and (min-width:  toEm(1800))) {
+         @include adaptiveValue(padding-top, 120, 60);
+      }
+      padding-left: toRem(15);
+      @include adaptiveValue(padding-top, 120, 60);
+
+      filter: opacity(0);
+      translate: 0 110%;
+      transition: translate 0.8s, filter 0.8s;
+
+      &._active {
+         filter: opacity(1);
+         translate: 0 0;
+      }
+   }
+   // .hero__title
+   &__title {
+      position: relative;
+      z-index: 2;
+      &-row {
+         display: inline-flex;
+         align-items: flex-start;
+
+         span {
+            line-height: 100%;
+         }
+         span:first-child {
+            @include adaptiveValueMod(font-size, 120, 30, 1920, 991.98);
+            line-height: 100%;
+         }
+         span:last-child {
+            @include adaptiveValueMod(font-size, 248, 60, 1920, 991.98);
+            @media (min-width:  toEm(1700)) {
+               line-height: 80%;
+            }
+            line-height: 100%;
+         }
+      }
+   }
+   .hero__title-top {
+      @include adaptiveValue(font-size, 248, 60);
+      font-weight: 400;
+      line-height: 90%;
+      margin-bottom: calc(29 / 248) * 1em;
+   }
+   // .hero__slider
+   &__slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+   // .hero__slide-img
+   &__slide-img {
+      min-height: 100vh;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 17.3%, rgba(0, 0, 0, 0) 73.61%),
+         linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+   }
+   &__pagination {
+      position: absolute;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      @include adaptiveValue(gap, 16, 10);
+      @media (max-width:  toEm($mobile)) {
+         justify-content: center;
+         width: 100%;
+      }
+
+      width: toRem(232);
+      overflow: hidden;
+
+      @media (min-width:  toEm($mobile)) {
+         @include adaptiveValue(left, 112, 20);
+         @include adaptiveValue(bottom, 60, 20);
+      }
+      @media (max-width:  toEm($mobile)) {
+         bottom: toRem(20);
+         left: 50%;
+         translate: -50% 0;
+      }
+      .swiper-pagination-bullet {
+         display: block;
+         @include adaptiveValue(width, 95, 30);
+         background-color: $white;
+         height: toRem(4);
+         filter: opacity(0.3);
+         transition: filter 0.3s;
+      }
+      .swiper-pagination-bullet-active {
+         filter: opacity(1);
+      }
+   }
+}
+.card-hero {
+   @media (height > toEm(750)) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+   }
+   display: flex;
+   @media (max-width:  toEm($tablet)) {
+      width: 100%;
+   }
+   @media (height < toEm(750)) {
+      justify-content: flex-end;
+   }
+   // .card-hero__body
+   &__body {
+      @media (min-width:  toEm($tablet)) {
+         // @include adaptiveValue(height, 822, 300);
+         @include adaptiveValue(width, 820, 400);
+      }
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      background-color: $blue;
+      position: relative;
+      position: relative;
+      z-index: 3;
+      @media ((height > toEm(750)) and (min-width:  toEm($tablet))) {
+         height: toRem(820);
+      }
+
+      overflow: clip;
+
+      &::before {
+         content: "";
+         display: block;
+         @include adaptiveValue(width, 60, 30);
+         height: 100%;
+         background-color: $brown;
+         position: absolute;
+         top: 0;
+         right: 0;
+      }
+      @media ((min-width:  toEm($tablet))) {
+         &::after {
+            content: "";
+            display: block;
+            width: toRem(1544);
+            height: toRem(1544);
+            background: url("../img/icons/decor.svg") 0 0 / cover no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: toRem(200);
+            z-index: 2;
+            @media (height < toEm(750)) {
+               display: none;
+            }
+         }
+      }
+      padding-top: toRem(20);
+   }
+   // .card-hero__content
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      @include adaptiveValue(row-gap, 90, 20);
+      @include adaptiveValue(padding-bottom, 126, 50);
+      @include adaptiveValue(padding-left, 110, 20);
+      @media (height < toEm(800)) {
+         @media (min-width:  toEm($pc)) {
+            padding-bottom: toRem(20);
+            padding-left: toRem(110);
+            row-gap: toRem(30);
+         }
+      }
+      padding-right: toRem(60);
+   }
+   // .card-hero__text
+   &__text {
+      @media (min-width:  toEm($tablet)) {
+         max-width: toRem(316);
+
+         display: -webkit-box;
+
+         -webkit-line-clamp: 10;
+         -webkit-box-orient: vertical;
+         overflow: hidden;
+      }
+      color: $white;
+
+      filter: opacity(0);
+      translate: 120% 0;
+      transition: filter 0.8s, translate 0.8s;
+      &._active {
+         filter: opacity(1);
+         translate: 0 0;
+         transition-delay: 0.3s;
+      }
+      @media (max-width:  $mobile) {
+         margin-bottom: toRem(20);
+      };
+   }
+   // .card-hero__btn
+   &__btn {
+      position: relative;
+      z-index: 6;
+
+      filter: opacity(0);
+      translate: 0% 120%;
+      transition: filter 0.8s, translate 0.8s;
+      &._active {
+         filter: opacity(1);
+         translate: 0 0;
+         transition-delay: 0.6s;
+      }
+   }
+}

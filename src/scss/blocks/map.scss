@@ -1,0 +1,166 @@
+.map {
+   display: none;
+}
+@media (min-width:  toEm(1300)) {
+   .map {
+      display: block;
+      position: relative;
+      background-color: $blue;
+      overflow: clip;
+      // .map__container
+      &__container {
+         position: relative;
+         min-height: toRem(1056);
+         @include adaptiveValueMod(min-height, 1056, 300, $maxWidthContainer, $mobile);
+      }
+      // .map__item
+      &__item {
+         position: absolute;
+         top: 0;
+         left: 0;
+         height: 100%;
+         // max-width: toRem(930);
+         @include adaptiveValueMod(max-width, 930, 200, 1920, 320);
+         width: 100%;
+         z-index: 3;
+      }
+      &__bgr {
+         position: absolute;
+         z-index: 2;
+      }
+      // .map__bgr-1
+      &__bgr-1 {
+         @include adaptiveValueMod(width, 1066, 0, 1920, 0);
+         @include adaptiveValueMod(height, 1066, 0, 1920, 0);
+         top: calc(-420 / 1056) * 100%;
+         left: calc(-150 / 1056) * 100%;
+      }
+      // .map__bgr-2
+      &__bgr-2 {
+         @include adaptiveValueMod(width, 2317, 1000, 1920, 0);
+         @include adaptiveValueMod(height, 2317, 1000, 1920, 0);
+         top: -140%;
+         right: -84%;
+      }
+      // .map__bgr-white
+      &__bgr-white {
+         top: calc(604 / 1056) * 100%;
+         left: calc(600 / 1462) * 100%;
+         z-index: 5;
+         @include adaptiveValueMod(width, 84, 20, 1920, 320);
+         @include adaptiveValueMod(height, 84, 20, 1920, 320);
+         img {
+            max-width: 100%;
+         }
+      }
+      // .map__cityName
+      &__cityName {
+         position: absolute;
+         font-weight: 500;
+         color: $brown;
+         z-index: 5;
+      }
+      // .map__cityName-1
+      &__cityName-1 {
+         top: calc(142 / 1056) * 100%;
+         left: calc(520 / 1462) * 100%;
+      }
+      // .map__cityName--top
+      &__cityName--top {
+      }
+      // .map__cityName--big
+      &__cityName--big {
+         @include adaptiveValue(font-size, 34, 20);
+         font-weight: 500;
+      }
+      // .map__cityName-2
+      &__cityName-2 {
+         top: calc(306 / 1056) * 100%;
+         left: calc(576 / 142) * 100%;
+      }
+      // .map__cityName-3
+      &__cityName-3 {
+         top: calc(470 / 1056) * 100%;
+         left: calc(696 / 1462) * 100%;
+      }
+      // .map__cityName-4
+      &__cityName-4 {
+         top: calc(406 / 1056) * 100%;
+         left: calc(300 / 1462) * 100%;
+      }
+      // .map__cityName--center
+      &__cityName--center {
+         color: $blue;
+      }
+      // .map__cityName-5
+      &__cityName-5 {
+         top: calc(372 / 1056) * 100%;
+         left: calc(470 / 1462) * 100%;
+      }
+      // .map__cityName-6
+      &__cityName-6 {
+         top: calc(550 / 1056) * 100%;
+         left: calc(520 / 1462) * 100%;
+      }
+      // .map__cityName--white
+      &__cityName--white {
+         color: $white;
+         @include adaptiveValue(font-size, 26, 20);
+         font-weight: 600;
+      }
+      // .map__cityName-7
+      &__cityName-7 {
+         top: calc(620 / 1056) * 100%;
+         left: calc(352 / 1462) * 100%;
+      }
+      // .map__cityName--bottom
+      &__cityName--bottom {
+      }
+      // .map__cityName-8
+      &__cityName-8 {
+      }
+      // .map__title
+      &__title {
+         position: absolute;
+         z-index: 5;
+         @include adaptiveValue(bottom, 120, 20);
+         @media (min-width:  toEm(1700)) {
+            right: toRem(-74);
+         }
+         right: toRem(15);
+         color: $white;
+         @include adaptiveValueMod(font-size, 123, 60, $maxWidthContainer, $mobile);
+         line-height: 100%;
+         text-align: center;
+         & > span {
+            display: flex;
+            justify-content: center;
+         }
+         span:last-child {
+            position: relative;
+            align-items: flex-start;
+            gap: toRem(20);
+            span:first-child {
+               @include adaptiveValue(font-size, 76, 60);
+               line-height: 100%;
+               &::before,
+               &::after {
+                  content: "";
+                  display: block;
+                  width: toRem(92);
+                  height: toRem(1);
+                  background-color: $brown;
+                  position: absolute;
+                  top: 0;
+               }
+               &::after {
+                  left: 0;
+               }
+               &::before {
+                  right: 0;
+               }
+            }
+         }
+      }
+   }
+} ;

@@ -1,0 +1,101 @@
+.service {
+   // .service__containerRight
+   &__containerRight {
+      padding: 0;
+      max-width: 100%;
+      // margin-right: calc(50% - 731px);
+      @media (max-width:  toEm($tablet)) {
+         padding-left: toRem(15);
+      }
+   }
+   &__container {
+      max-width: toRem(1716);
+   }
+   &__title {
+      @media (min-width:  toEm($tablet)) {
+         @include adaptiveValueMod(font-size, 200, 100, 1650, 991.98);
+      }
+      @include adaptiveValue(font-size, 100, 60);
+      font-weight: 400;
+      line-height: 100%;
+      color: $blue;
+   }
+}
+.service-top {
+   display: flex;
+   align-items: center;
+   @include adaptiveValueMod(gap, 114, 20, 1650, 767.98);
+   padding-right: toRem(15);
+   @include adaptiveValueMod(margin-bottom, 40, 20, $maxWidthContainer, $mobile);
+   @media (max-width:  toEm($tablet)) {
+      flex-wrap: wrap;
+   }
+   // .service-top__img
+   &__img {
+      @media (min-width:  toEm($tablet)) {
+         display: block;
+         aspect-ratio: 700/244;
+         flex-basis: toRem(700);
+      }
+      display: none;
+   }
+   // .service-top__title
+   &__title {
+   }
+}
+.service-center {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: toRem(20);
+   // .service-center__img
+   &__img {
+      @media (min-width:  toEm($tablet)) {
+         display: block;
+         aspect-ratio: 345/320;
+         flex-basis: toRem(345);
+      }
+      display: none;
+   }
+   // .service-center__text
+   &__text {
+      @media (min-width:  toEm($tablet)) {
+         flex-basis: toRem(316);
+      }
+   }
+   // .service-center__title
+   &__title {
+   }
+   @include adaptiveValueMod(margin-bottom, 100, 20, $maxWidthContainer, $mobile);
+}
+.service-bottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   @include adaptiveValueMod(gap, 80, 10, 1650, 991.98);
+   @media (max-width:  toEm(1300)) {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+   @media (max-width:  toEm($mobile)) {
+      margin: 0 toRem(-15);
+   }
+   // .service-bottom__img
+   &__img {
+      position: relative;
+      z-index: 4;
+      aspect-ratio: 277/390;
+      flex-basis: toRem(277);
+      @media (min-width:  toEm(1300)) {
+         &:nth-child(2n-1) {
+            @include adaptiveValue(margin-top, 124, 30);
+         }
+      }
+      @media (max-width:  toEm(1300)) {
+         flex-basis: 30%;
+      }
+      @media (max-width:  toEm($mobile)) {
+         flex-basis: 100%;
+      }
+   }
+}
